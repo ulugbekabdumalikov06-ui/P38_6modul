@@ -9,8 +9,8 @@ class Register(Model):
         id = AutoField(primary_key=True)
         first_name = CharField(max_length=100)
         last_name = CharField(max_length=100)
-        email = EmailField()
-        password = CharField(max_length = 100)
+        email = EmailField(max_length=255)
+        password = CharField(max_length = 50)
         is_active = BooleanField(default=True)
         created_at = DateTimeField(auto_now_add=True)
 
