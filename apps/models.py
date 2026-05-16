@@ -14,12 +14,13 @@ class Register(Model):
         is_active = BooleanField(default=True)
         created_at = DateTimeField(auto_now_add=True)
 
-    class Posts:
-        id = AutoField(primary_key=True)
-        comments = TextField()
-        author_id = ForeignKey(Users, on_delete=CASCADE)
-        created_at = DateTimeField(auto_now_add=True)
-        updated_at = DateTimeField(auto_now=True)
+        class Posts:
+            id = AutoField(primary_key=True)
+            comments = TextField()
+            author_id = ForeignKey(Users, on_delete=CASCADE)
+            created_at = DateTimeField(auto_now_add=True)
+            updated_at = DateTimeField(auto_now=True)
+
     class Comments:
         id = AutoField(primary_key=True)
         content = TextField()
